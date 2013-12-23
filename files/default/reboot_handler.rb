@@ -19,7 +19,7 @@
 class RebootHandler < Chef::Handler
   include Chef::Mixin::ShellOut
 
-  def initialize(allow_pending_reboots=true, delay=2, reason="Reboot by Chef")
+  def initialize(allow_pending_reboots=true, delay=0, reason="Reboot by Chef")
     @allow_pending_reboots = allow_pending_reboots
     @delay = delay
     @reason = reason
